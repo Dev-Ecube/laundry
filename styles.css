@@ -414,6 +414,7 @@ aside .order-btn {
   font-size: clamp(1rem 5vw 1.5rem);
 }
 /* price section */
+
 .price {
   display: grid;
   place-items: center;
@@ -982,7 +983,29 @@ textarea {
   resize: none;
   height: 200px;
 }
+small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
 
+.error small {
+  visibility: visible;
+}
+.form-control input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.form-row.success input {
+  border-color: var(--success-color);
+}
+
+.form-row.error input {
+  border-color: var(--error-color);
+}
 .submit-btn {
   border-color: var(--crl-bck5);
   color: var(--crl-bck5);
