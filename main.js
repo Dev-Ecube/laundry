@@ -1,3 +1,6 @@
+// animation on scroll
+AOS.init();
+
 // *****close link*****
 const navToggle = document.querySelector(".nav-toggle");
 const linksContainer = document.querySelector(".links-container");
@@ -162,7 +165,7 @@ const questions = document.querySelector(".questions-center");
 questions.innerHTML = items
   .map((item) => {
     // console.log(item);
-    return `<article class="question" data-aos="fade-up" data-aos-delay="${number}">
+    return `<article class="question" data-aos="fade-up" data-aos-delay="${item.number}">
       <div class="question-title " >
         <p>${item.question}</p>
         <button type="button" class="question-btn">
@@ -328,4 +331,3 @@ form.addEventListener("submit", function (e) {
 });
 
 // initialize animation on scroll
-AOS.init();
